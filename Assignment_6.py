@@ -50,12 +50,10 @@
 # Python Code:
 
 import json
-f = open('employee.json')
-data = json.load(f)
-for i in data['Employees']:
-    print(i)
-  
-f.close()
+with open('employee.json', 'r') as f: 
+    object = json.load(f)
+    for i in object["Employees"]:
+        print(i)
 
 # output:-
 {'name': 'Mike', 'DOB': '12-01-1985', 'height': '1.3m', 'city': 'Hydrabad', 'state': 'Telangana'}
